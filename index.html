@@ -292,6 +292,62 @@
       box-shadow: 0 4px 12px rgba(229,62,62,0.3);
     }
 
+    /* AI Direction */
+    .ai-roadmap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .ai-card {
+      background: var(--card-bg); border-radius: var(--radius-sm);
+      padding: 24px; border: 1px solid var(--border);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+    .ai-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .ai-card h4 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .ai-card p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7; }
+    .ai-card .ai-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 0.65rem; font-weight: 600; margin-top: 10px; margin-right: 4px;
+    }
+    .ai-tag-current { background: #EBF8FF; color: #2B6CB0; border: 1px solid #BEE3F8; }
+    .ai-tag-future { background: #FAF5FF; color: #6B46C1; border: 1px solid #E9D8FD; }
+    .ai-tag-strategy { background: #FFFFF0; color: #975A16; border: 1px solid #FEFCBF; }
+    .ai-current-list {
+      margin-top: 12px;
+    }
+    .ai-current-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid #EDF2F7;
+      font-size: 0.82rem; color: var(--text-secondary);
+    }
+    .ai-current-item:last-child { border-bottom: none; }
+    .ai-current-item .ai-emoji { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .ai-current-item strong { color: var(--text-primary); font-weight: 600; }
+    .ai-strategy-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, #E53E3E, #C53030);
+      color: #fff; font-size: 0.7rem; font-weight: 700;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .ai-strategy-item {
+      display: flex; gap: 10px; padding: 12px 0;
+      border-bottom: 1px solid #EDF2F7;
+    }
+    .ai-strategy-item:last-child { border-bottom: none; }
+    .ai-strategy-item .ai-strategy-text {
+      font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7;
+    }
+    .ai-strategy-item .ai-strategy-text strong {
+      color: var(--text-primary); font-weight: 600; display: block; margin-bottom: 2px;
+    }
+    @media (max-width: 768px) {
+      .ai-roadmap { grid-template-columns: 1fr; }
+    }
+
     /* Footer */
     .footer {
       text-align: center; padding: 40px 24px; margin-top: 20px;
@@ -968,6 +1024,148 @@
             <li>시민단체의 지속적인 재승인 취소 요구</li>
             <li>정치적 불확실성에 따른 광고 집행 위축</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 8-2: AI ERA DIRECTION ===== -->
+    <div class="section">
+      <div class="section-title">
+        <span class="icon">&#129302;</span>
+        AI 시대, MBN이 나아가야 할 방향
+        <span class="line"></span>
+      </div>
+
+      <!-- Current AI Achievements -->
+      <div class="card" style="margin-bottom:20px;">
+        <div style="font-size:1rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:1.2rem;">&#9989;</span> MBN의 현재 AI 활용 현황
+        </div>
+        <div class="ai-current-list">
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#128250;</span>
+            <div><strong>AI 앵커 김주하 (2020~)</strong> — 업계 최초 AI 앵커 도입. 딥러닝 기반 김주하 앵커 디지털 클론으로 뉴스 진행. 국내 방송 AI 도입의 선구자적 사례</div>
+          </div>
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#128221;</span>
+            <div><strong>AI 기자 리나 · 태빈 (2025~)</strong> — 생성형 AI 기자가 실시간 뉴스 브리핑 진행. MBN 뉴스7에서 정규 편성하여 운용 중</div>
+          </div>
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#127760;</span>
+            <div><strong>AI 영어 더빙 뉴스 (2025.04~)</strong> — 한국어 뉴스를 AI 실시간 영어 자동 더빙. 글로벌 시청자 확대를 위한 다국어 전략 시작</div>
+          </div>
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#127471;&#127477;</span>
+            <div><strong>AI 일본어 자막 서비스</strong> — 뉴스 콘텐츠의 AI 기반 일본어 자막 자동 생성. 일본 시장 진출을 위한 언어 장벽 해소</div>
+          </div>
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#127916;</span>
+            <div><strong>2025 대선 개표방송 AI CG (65%)</strong> — 개표 방송 그래픽의 65%를 AI로 제작. 비용 약 80% 절감 효과 달성</div>
+          </div>
+          <div class="ai-current-item">
+            <span class="ai-emoji">&#128218;</span>
+            <div><strong>방송 언어 분석 AI (엘젠 공동개발)</strong> — 방송 자막·대사의 공정성·편향 자동 분석 시스템 개발 중</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Strategy Roadmap -->
+      <div class="ai-roadmap">
+        <!-- Strategy 1: Global Content Automation -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#127760;</span> 글로벌 콘텐츠 자동화</h4>
+          <p>AI 영어 더빙·일본어 자막을 넘어, 중국어·스페인어·아랍어 등 <strong>10개국 이상 다국어 자동 변환</strong> 체계를 구축해야 합니다. 현역가왕 등 K-콘텐츠의 글로벌 유통 비용을 획기적으로 줄이고, 동남아·중동 시장을 공략할 수 있습니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-current">현재: 영어·일본어</span>
+            <span class="ai-tag ai-tag-future">목표: 10개국+ 다국어</span>
+          </div>
+        </div>
+
+        <!-- Strategy 2: AI-Human Co-Creation -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#129309;</span> AI-Human Co-Creation (AHCC)</h4>
+          <p>AI가 대본 초안·CG·편집을 담당하고 인간 PD가 최종 크리에이티브를 결정하는 <strong>협업 제작 모델</strong>을 확립해야 합니다. 대선 CG 65% AI 제작 경험을 예능·교양 전 장르로 확대하면 제작비 절감과 품질 향상을 동시에 달성할 수 있습니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-current">현재: 뉴스 CG 65%</span>
+            <span class="ai-tag ai-tag-future">목표: 전 장르 AI 협업</span>
+          </div>
+        </div>
+
+        <!-- Strategy 3: Hyper-personalization -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#127919;</span> 초개인화 콘텐츠 추천</h4>
+          <p>시청자 시청 패턴·관심사·반응 데이터를 AI로 분석하여 <strong>1:1 맞춤형 콘텐츠 큐레이션</strong>을 제공해야 합니다. MBN 앱·OTT에서 개인별 뉴스 브리핑, 맞춤 교양 편성, 관심 종목 경제 뉴스 자동 편성 등으로 디지털 전환을 가속화할 수 있습니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-strategy">핵심: 경제 전문성 + AI 추천</span>
+            <span class="ai-tag ai-tag-future">타깃: 디지털 중장년층</span>
+          </div>
+        </div>
+
+        <!-- Strategy 4: Virtual Human & IP -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#128126;</span> 버추얼 휴먼 · AI IP 확장</h4>
+          <p>AI 앵커 김주하를 넘어, <strong>버추얼 MC·AI 예능인·디지털 트롯 가수</strong> 등 AI 기반 방송 인물을 확대해야 합니다. 24시간 경제 뉴스 진행 AI 앵커, 트롯 콘텐츠와 결합한 버추얼 가수 IP 등으로 새로운 수익 모델을 창출할 수 있습니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-current">현재: AI 앵커·기자</span>
+            <span class="ai-tag ai-tag-future">목표: 버추얼 MC·가수 IP</span>
+          </div>
+        </div>
+
+        <!-- Strategy 5: AI-Powered Production -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#128640;</span> 에이전틱 AI 기반 제작 혁신</h4>
+          <p>단순 보조를 넘어, <strong>자율적으로 취재·편집·송출하는 에이전틱 AI</strong> 시스템을 도입해야 합니다. AI가 속보 감지→취재→기사 작성→CG 생성→방송 편성까지 자동화하는 파이프라인을 구축하면, 속보 대응력과 24시간 뉴스 생산 능력이 비약적으로 향상됩니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-future">에이전틱 AI</span>
+            <span class="ai-tag ai-tag-strategy">속보 자동 파이프라인</span>
+          </div>
+        </div>
+
+        <!-- Strategy 6: Data & Revenue -->
+        <div class="ai-card">
+          <h4><span style="font-size:1.2rem;">&#128176;</span> AI 광고 · 데이터 수익 모델</h4>
+          <p>AI 기반 <strong>타깃 광고 시스템</strong>으로 광고 단가를 높이고, 시청 데이터 분석 기반의 새로운 B2B 수익 모델을 개발해야 합니다. 경제 전문 채널 특성상 금융·투자 관련 데이터 서비스, AI 시장 분석 리포트 등으로 방송 외 수익원을 다각화할 수 있습니다.</p>
+          <div>
+            <span class="ai-tag ai-tag-strategy">광고 타깃팅 고도화</span>
+            <span class="ai-tag ai-tag-future">B2B 데이터 사업</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Direction Summary -->
+      <div class="card" style="margin-top:20px;">
+        <div style="font-size:1rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:1.2rem;">&#128161;</span> AI 전환 핵심 전략 요약
+        </div>
+        <div>
+          <div class="ai-strategy-item">
+            <span class="ai-strategy-num">1</span>
+            <div class="ai-strategy-text">
+              <strong>AI-First 제작 체계 확립</strong>
+              기획→제작→편집→송출 전 과정에 AI를 내재화. 2025년 대선 CG 80% 비용절감 경험을 전 장르로 확대하여 제작비 효율을 극대화
+            </div>
+          </div>
+          <div class="ai-strategy-item">
+            <span class="ai-strategy-num">2</span>
+            <div class="ai-strategy-text">
+              <strong>경제 전문성 × AI 시너지</strong>
+              매일경제 그룹의 경제 데이터 + AI 분석 역량을 결합. 실시간 AI 경제 해설, 투자 자동 분석, 맞춤형 재테크 콘텐츠로 차별화
+            </div>
+          </div>
+          <div class="ai-strategy-item">
+            <span class="ai-strategy-num">3</span>
+            <div class="ai-strategy-text">
+              <strong>글로벌 K-콘텐츠 AI 유통</strong>
+              다국어 자동 더빙·자막 시스템을 고도화하여 현역가왕 등 히트 콘텐츠의 해외 진출 비용을 90% 이상 절감
+            </div>
+          </div>
+          <div class="ai-strategy-item">
+            <span class="ai-strategy-num">4</span>
+            <div class="ai-strategy-text">
+              <strong>디지털 전환 + 젊은 시청층 확보</strong>
+              AI 기반 숏폼 자동 생성, 개인화 앱 서비스, 버추얼 콘텐츠로 20~30대 디지털 네이티브 시청자를 적극 유입
+            </div>
+          </div>
         </div>
       </div>
     </div>
